@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Merry Christmas💘</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #0f0f1f;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        overflow: hidden;
+        flex-direction: column;
+        padding: 20px;
+      }
+
+      .container {
+        position: relative;
+        width: 100%;
+        max-width: 600px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .tree {
+        position: relative;
+        text-align: center;
+        line-height: 1.2;
+        font-family: monospace;
+        color: #2d5a27;
+        margin-bottom: 20px;
+        animation: treeWiggle 3s ease-in-out infinite;
+        font-size: calc(16px + 1vw); /* Responsive font size */
+      }
+
+      @keyframes treeWiggle {
+        0% {
+          transform: rotate(0deg);
+        }
+        25% {
+          transform: rotate(1deg);
+        }
+        75% {
+          transform: rotate(-1deg);
+        }
+        100% {
+          transform: rotate(0deg);
+        }
+      }
+
+      .ornament {
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        animation: sparkle 1.5s infinite;
+      }
+
+      .light {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        animation: blink 1s infinite;
+        box-shadow: 0 0 10px currentColor;
+      }
+
+      .snow {
+        position: fixed;
+        width: 4px;
+        height: 4px;
+        background: white;
+        border-radius: 50%;
+        pointer-events: none;
+        filter: blur(1px);
+      }
+
+      .message-container {
+        width: 200%;
+        text-align: center;
+        margin-top: 20px;
+        padding: 0 10px;
+      }
+
+      .message {
+        color: #ff6b6b;
+        font-size: calc(18px + 1vw);
+        font-family: "Arial", sans-serif;
+        text-shadow: 0 0 5px #ff6b6b;
+        animation: glow 2s infinite;
+        margin-bottom: 15px;
+        white-space: nowrap;
+      }
+
+      .message2 {
+        color: #fff;
+        font-size: calc(16px + 1vw);
+        font-family: "Comic Sans MS", cursive;
+        animation: rainbow 5s infinite;
+        white-space: nowrap;
+      }
+
+      .music-control {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: rgba(255, 255, 255, 0.2);
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        color: white;
+        z-index: 1000;
+        font-size: calc(14px + 0.5vw);
+      }
+
+      @keyframes sparkle {
+        0% {
+          transform: scale(1);
+          opacity: 1;
+        }
+        50% {
+          transform: scale(1.5);
+          opacity: 0.5;
+          box-shadow: 0 0 20px currentColor;
+        }
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+
+      @keyframes blink {
+        0% {
+          opacity: 0.2;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0.2;
+        }
+      }
+
+      @keyframes glow {
+        0% {
+          text-shadow: 0 0 5px #ff6b6b;
+        }
+        50% {
+          text-shadow: 0 0 20px #ff6b6b, 0 0 30px #ff6b6b;
+        }
+        100% {
+          text-shadow: 0 0 5px #ff6b6b;
+        }
+      }
+
+      @keyframes rainbow {
+        0% {
+          color: red;
+        }
+        20% {
+          color: yellow;
+        }
+        40% {
+          color: #44ff44;
+        }
+        60% {
+          color: #4444ff;
+        }
+        80% {
+          color: violet;
+        }
+        100% {
+          color: red;
+        }
+      }
+
+      @keyframes snowfall {
+        0% {
+          transform: translateY(-100vh) rotate(0deg);
+        }
+        100% {
+          transform: translateY(100vh) rotate(360deg);
+        }
+      }
+
+      .star {
+        color: yellow;
+        position: absolute;
+        top: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: calc(24px + 1vw);
+        animation: starTwinkle 1s infinite;
+        filter: drop-shadow(0 0 10px yellow);
+      }
+
+      .trunk {
+        color: #8b4513;
+        margin-top: 10px;
+        font-size: calc(20px + 1vw);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .message2 span {
+        display: inline-block;
+        animation: bounce 1s infinite;
+      }
+
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-5px);
+        }
+      }
+
+      @media (max-width: 480px) {
+        .tree {
+          transform: scale(0.8);
+        }
+
+        .message,
+        .message2 {
+          font-size: calc(14px + 1vw);
+        }
+
+        .music-control {
+          bottom: 10px;
+          right: 10px;
+          padding: 8px;
+          font-size: 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="tree">
+        <div class="star">⭐</div>
+        *<br />
+        ***<br />
+        *****<br />
+        *******<br />
+        *********<br />
+        ***********<br />
+        *************<br />
+        ***************<br />
+        *****************<br />
+        *******************<br />
+        *********************<br />
+        ***********************<br />
+        <div class="trunk">||||</div>
+      </div>
+
+      <div class="message-container">
+        <div class="message">
+          🎄 chúc cậu 1 mùa noel vui vẻ và hạnh phúc 😥🎄
+        </div>
+        <div class="message2">
+          <span>N</span><span>o</span><span>e</span><span>l</span>
+          <span>&nbsp;</span>
+          <span>v</span><span>u</span><span>i</span>
+          <span>&nbsp;</span>
+          <span>v</span><span>ẻ</span>
+          <span>&nbsp;</span>
+          <span>n</span><span>h</span><span>é</span>
+          <span>&nbsp;</span>
+          <span>T</span><span>r</span><span>à</span>
+          <span>&nbsp;</span>
+          <span>G</span><span>i</span><span>a</span><span>n</span
+          ><span>g</span> <span>!</span><span>!</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="music-control" onclick="toggleMusic()">🎵 Bật/Tắt Nhạc</div>
+    <audio id="bgMusic" loop>
+      <source
+        src="NHẠC GIÁNG SINH - REMIX KHÔNG LỜI- TIẾNG CHUÔNG ĐÊM GIÁNG SINH.mp3"
+        type="audio/mp3"
+      />
+    </audio>
+
+    <script>
+      let musicPlaying = false;
+      const audio = document.getElementById("bgMusic");
+
+      function toggleMusic() {
+        if (musicPlaying) {
+          audio.pause();
+        } else {
+          audio.play();
+        }
+        musicPlaying = !musicPlaying;
+      }
+
+      function createDecorations() {
+        const tree = document.querySelector(".tree");
+        const ornamentColors = [
+          "#ff0000",
+          "#ffff00",
+          "#00ff00",
+          "#0000ff",
+          "#ff00ff",
+          "#ffffff",
+        ];
+        const lightColors = [
+          "#ff4444",
+          "#44ff44",
+          "#4444ff",
+          "#ffff44",
+          "#ff44ff",
+        ];
+
+        // Scale decorations based on screen size
+        const scale = window.innerWidth < 480 ? 0.7 : 1;
+
+        // Tạo quả cầu
+        for (let i = 0; i < 40; i++) {
+          const ornament = document.createElement("div");
+          ornament.className = "ornament";
+          const left = (Math.random() * 200 - 100) * scale;
+          const top = Math.random() * 300 * scale;
+          ornament.style.left = `${left}px`;
+          ornament.style.top = `${top}px`;
+          ornament.style.backgroundColor =
+            ornamentColors[Math.floor(Math.random() * ornamentColors.length)];
+          ornament.style.animationDelay = `${Math.random() * 2}s`;
+          tree.appendChild(ornament);
+        }
+
+        // Tạo đèn
+        for (let i = 0; i < 35; i++) {
+          const light = document.createElement("div");
+          light.className = "light";
+          const left = (Math.random() * 200 - 100) * scale;
+          const top = Math.random() * 300 * scale;
+          light.style.left = `${left}px`;
+          light.style.top = `${top}px`;
+          light.style.backgroundColor =
+            lightColors[Math.floor(Math.random() * lightColors.length)];
+          light.style.animationDelay = `${Math.random() * 1}s`;
+          tree.appendChild(light);
+        }
+      }
+
+      function createSnow() {
+        const snowflake = document.createElement("div");
+        snowflake.className = "snow";
+        snowflake.style.left = Math.random() * window.innerWidth + "px";
+        snowflake.style.opacity = Math.random();
+        const duration = Math.random() * 3 + 2;
+        snowflake.style.animation = `snowfall ${duration}s linear forwards`;
+        document.body.appendChild(snowflake);
+
+        snowflake.addEventListener("animationend", () => {
+          snowflake.remove();
+        });
+      }
+
+      // Khởi tạo
+      createDecorations();
+      setInterval(createSnow, 100);
+
+      // Xử lý resize
+      window.addEventListener("resize", () => {
+        const tree = document.querySelector(".tree");
+        while (tree.getElementsByClassName("ornament").length > 0) {
+          tree.getElementsByClassName("ornament")[0].remove();
+        }
+        while (tree.getElementsByClassName("light").length > 0) {
+          tree.getElementsByClassName("light")[0].remove();
+        }
+        createDecorations();
+      });
+    </script>
+  </body>
+</html>
